@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfMediaPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="WPF Media Player" Height="1000" Width="1408.982" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" BorderThickness="3,3,3,6" BorderBrush="#FF181817" FontSize="14" Loaded="window_loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="Res/Back.jpg"/>
+    </Window.Background>
+    <Canvas HorizontalAlignment="Left" Height="648" Margin="0,0,-2.2,0" VerticalAlignment="Top" Width="1399" RenderTransformOrigin="0.5,0.5">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleX="0.307"/>
+                <RotateTransform/>
+                <TranslateTransform X="1.677"/>
+            </TransformGroup>
+        </Canvas.RenderTransform>
+        <Border BorderBrush="Black" BorderThickness="1" Height="507" Canvas.Left="10" Canvas.Top="63" Width="1355">
+            <MediaElement x:Name="me" Stretch="Uniform" Margin="0,0,0,-306"/>
+        </Border>
+        <Button x:Name="b1" Content="Play" Canvas.Left="65" Canvas.Top="882" Width="230" Height="47" Background="Green" FontWeight="Bold" FontSize="18" Click="b1_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="b2" Content="Pause" Canvas.Left="383" Canvas.Top="882" Width="230" Height="47" Background="Yellow" FontWeight="Bold" FontSize="18" Click="b2_Click"/>
+        <Button x:Name="b3" Content="Stop" Canvas.Left="710" Canvas.Top="882" Width="230" Height="47" Background="DarkRed" FontWeight="Bold"  FontSize="18" Click="b3_Click"/>
+        <Button x:Name="b4" Content="Exit" Canvas.Left="1011" Canvas.Top="882" Width="230" Height="47" FontWeight="Bold" Foreground="#FFFCF4F4" FontSize="18" Click="b4_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="Blue" Offset="1"/>
+                    <GradientStop Color="Green" Offset="0.515"/>
+                    <GradientStop Color="Orange" Offset="0.319"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="b5" Content="Add Local Video (mp4)" Canvas.Left="1096" Canvas.Top="10" Width="269" Height="48" Background="black" FontWeight="Bold" BorderBrush="#FFFAF6F6" Foreground="#FFFCF7F7" FontSize="18" Click="b5_Click"/>
+        <TextBox x:Name="tb" Height="46" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="10" Width="1081"/>
+    </Canvas>
+</Window>
